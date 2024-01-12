@@ -1,0 +1,173 @@
+@import '_define.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family:
+    /*
+                  * "-apple-system" targets San Francisco
+                  * in Safari on Mac OS X and iOS, and
+                  * Neue Helvetica and Lucida Grande on older
+                  * versions of Mac OS X. It properly selects
+                  * between San Francisco Text
+                  * and San Francisco Display.
+                  */ -apple-system,
+    /* For Chrome on Mac OS X */ BlinkMacSystemFont,
+    /* Microsoft Windows and Windows Phone */ 'Segoe UI', /* Android */ 'Roboto',
+    /* KDE */ 'Oxygen', 'Ubuntu', /* Fedora */ 'Cantarell',
+    /* FirefoxOS */ 'Fira Sans', /* Android 2 */ 'Droid Sans',
+    /* MacOS 2 */ 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: 0.05rem;
+  background-color: #f2ffea;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+em {
+  font-style: normal;
+}
+
+pre {
+  white-space: pre-wrap;
+}
+
+.strong {
+  @apply px-1 font-bold;
+  background-color: #ea2000;
+  color: #101010;
+}
+
+/*
+  margin-block-start: 0.3em;
+  margin-block-end: 0.3em;
+  h1 --> 0.67em
+  h2 --> 0.83em
+  h3 --> 1em
+ */
+h1 {
+  @apply font-bold text-3xl;
+}
+
+h2 {
+  @apply font-bold text-2xl;
+}
+
+h3 {
+  @apply font-bold text-xl;
+}
+
+h4,
+h5,
+h6 {
+  @apply font-bold;
+}
+
+p,
+li {
+  line-height: 130%;
+}
+
+p {
+  margin-block-start: 0.2em;
+  margin-block-end: 0.8em;
+}
+
+li {
+  margin-bottom: 0.5em;
+}
+
+.content {
+  padding: 1rem;
+}
+
+a,
+a:visited,
+a:hover,
+a:active {
+  @mixin generic-link;
+}
+
+.button {
+  @apply block px-5 py-2 rounded-lg cursor-pointer border border-solid border-gray-300 drop-shadow-2xl text-center;
+}
+
+.input {
+  @apply px-2 py-2 rounded border border-solid border-gray-300 shadow-inner drop-shadow-2xl;
+}
+
+#app {
+  @apply w-full flex flex-col justify-start items-center;
+}
+
+#wrapper {
+  @mixin generic-content-wrapper;
+  @apply bg-white;
+}
+
+#content-wrapper {
+  @apply w-full;
+}
+
+#content {
+  @apply w-full border border-solid text-gray-100;
+  background-color: #e4ffcc;
+  border-color: #b2ff6d;
+}
+
+#stage {
+  @apply w-full h-full relative;
+  padding: 0.25rem;
+}
+
+#footer {
+  @apply w-full px-5 py-5 border border-solid flex flex-col justify-start items-center;
+  color: #ff4b40;
+  border-color: #ff928d;
+  background-color: #ffaaa6;
+}
+
+#btn-generate-dom {
+  margin-bottom: 0.5rem;
+  letter-spacing: 120%;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fb170c;
+  border-color: #ff928d;
+  background-color: #f2ffea;
+}
+
+.box {
+  @apply absolute p-2 bg-white flex flex-col justify-center items-center break-all text-gray-900;
+  font-size: 1rem;
+  font-weight: 500;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes box-anim {
+  0% {
+    transform: scale(0) translateY(0px);
+    opacity: 0;
+  }
+  5% {
+    transform: scale(1) translateY(-35px);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) translateY(-700px);
+    opacity: 1;
+  }
+}

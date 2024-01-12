@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "target": "es2015", // "es5"
+    "jsx": "react-jsx", // "react"
+    "jsxImportSource": "@emotion/react",
+    "moduleResolution": "node", // Needed when using 'resolveJsonModule'
+    "typeRoots": ["./node_modules/@types", "./src/d.ts"],
+    "resolveJsonModule": true,
+    "allowJs": true,
+    "checkJs": true,
+    // "declaration": false, // works without it
+    // "emitDeclarationOnly": false, // works without it
+    "noEmit": true, // definitely needed for type-checking
+    // "esModuleInterop": true, // works without it
+    // "forceConsistentCasingInFileNames": true, // works without it
+    // "strict": true, // works without it
+    // "strictNullChecks": false, // works without it
+    // "alwaysStrict": true, // works without it
+    "skipLibCheck": true, // Definitely needed to ignore 'node_modules'
+  },
+  "include": ["src/**/*.ts", "src/**/*.js"],
+  "exclude": [
+    "node_modules",
+    "types",
+    "jsdoc",
+    "src/assets",
+  ],
+}

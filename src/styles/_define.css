@@ -1,0 +1,25 @@
+@define-mixin generic-link {
+  &,
+  &:link,
+  &:visited {
+    text-decoration: underline;
+    color: #101010;
+  }
+  &:hover,
+  &:active {
+    text-decoration: underline;
+    color: #808080;
+  }
+}
+
+@define-mixin generic-content-wrapper {
+  @media (max-width: 767px) {
+    width: 100%;
+    max-width: 700px;
+  }
+
+  @media (min-width: 768px) {
+    width: 85%;
+    max-width: 1024px;
+  }
+}

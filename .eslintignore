@@ -1,0 +1,11 @@
+/dist
+/node_modules
+.gitignore
+.eslintignore
+.prettierignore
+package-lock.json
+LICENSE*
+READEME.md
+*.log
+*.lock
+*.png

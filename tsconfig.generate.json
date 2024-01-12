@@ -1,0 +1,167 @@
+{
+  "compilerOptions": {
+    /**
+     * ********************************
+     * Projects
+     * ********************************
+     */
+
+    /**
+     * ********************************
+     * Language and Environment
+     * ********************************
+     */
+
+    // Set the JavaScript language
+    // version for emitted JavaScript
+    // and include compatible library
+    // declarations.
+    //
+    // 'ES3' (default), 'ES5', 'ES2015',
+    // 'ES3' (default), 'ES5', 'ES2015',
+    // 'ES2016', 'ES2017', 'ES2018',
+    // 'ES2019', 'ES2020', or 'ESNEXT'.
+    "target": "es2015",
+
+    // Specify library files to be
+    // included in the compilation.
+    // >>> "Cannot redeclare
+    // >>> block-scoped variable 'name'"
+    //
+    // Note:
+    // TypeScript has 'window.name'
+    // already...
+    "lib": ["es6", "dom"],
+
+    /**
+     * ********************************
+     * Modules
+     * ********************************
+     */
+
+    // Specify what module code is
+    // generated.
+    "module": "commonjs",
+
+    // Specify how TypeScript looks up
+    // a file from a given module
+    // specifier.
+    //
+    // node: Node.js
+    // classic: TypeScript pre-1.6
+    //
+    // Default: "node10"
+    "moduleResolution": "node",
+
+    // It is just like
+    // './node_modules/@types'.
+    "typeRoots": ["./node_modules/@types", "./src/d.ts"],
+
+    // Enable importing .json files.
+    "resolveJsonModule": true,
+
+    /**
+     * ********************************
+     * JavaScript Support
+     * ********************************
+     */
+
+    // Allow JavaScript files to be
+    // a part of your program.
+    // Use the 'checkJS' option to
+    // get errors from these files.
+    "allowJs": true,
+
+    // Enable error reporting in
+    // type-checked JavaScript files.
+    "checkJs": true,
+
+    /**
+     * ********************************
+     * Emit
+     * ********************************
+     */
+
+    // Generate .d.ts files from
+    // TypeScript and JavaScript files
+    // in your project.
+    "declaration": true,
+
+    // Only output d.ts files and not
+    // JavaScript files.
+    "emitDeclarationOnly": true,
+
+    // Specify an output folder for all
+    // emitted files.
+    //
+    // Default: "./"
+    "outDir": "types",
+
+    // Disable emitting comments.
+    "removeComments": true,
+
+    // Disable emitting files from
+    // a compilation.
+    //
+    // Default: true,
+    "noEmit": false,
+
+    /**
+     * ********************************
+     * Interop Constraints
+     * ********************************
+     */
+
+    // Emit additional JavaScript to
+    // ease support for importing
+    // CommonJS modules. This enables
+    // 'allowSyntheticDefaultImports'
+    // for type compatibility.
+    //
+    // Note:
+    // This is definitely needed when
+    // generating types from JSDoc!!!
+    "esModuleInterop": true,
+
+    // Ensure that casing is correct in
+    // imports.
+    "forceConsistentCasingInFileNames": true,
+
+    /**
+     * ********************************
+     * Type Checking
+     * ********************************
+     */
+
+    // Enable all strict type-checking
+    // options.,
+    "strict": true,
+
+    // When type checking, take into
+    // account 'null' and 'undefined'.
+    "strictNullChecks": false,
+
+    // Ensure 'use strict' is always
+    // emitted.
+    "alwaysStrict": true,
+
+    /**
+     * ********************************
+     * Completeness
+     * ********************************
+     */
+
+    // Skip type checking all .d.ts
+    // files.
+    "skipLibCheck": true
+  },
+  "include": ["src/**/*"],
+  "exclude": [
+    "node_modules",
+    "types",
+    "jsdoc",
+    "src/assets",
+    "src/**/*.spec.js",
+    "src/**/*.test.js"
+  ]
+}

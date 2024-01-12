@@ -128,3 +128,7 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# For all the app specific ignore files and folders
+package-lock.json
+/jsdoc
